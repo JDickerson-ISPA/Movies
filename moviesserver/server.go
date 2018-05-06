@@ -19,9 +19,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func getMoviesHandler(w http.ResponseWriter, r *http.Request) {
 	m := Movie{Title: "Memento", Director: "Christopher Nolan"}
-	jsonMovie, _ := json.Marshal(m)
+	jsonM, _ := json.Marshal(m)
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(jsonMovie)
+	w.Write(jsonM)
 }
 
 type Movie struct {
